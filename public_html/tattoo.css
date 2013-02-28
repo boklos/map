@@ -1,0 +1,372 @@
+html,div,body,aside,article, section, header, footer, nav {
+	display: block;
+	margin:0;
+	padding: 0;
+}
+
+html {
+	background: white;
+}
+body {
+	background: white;
+	font: 100% Arial,Georgia,Times, sans-serif;
+}
+.wrapper{
+	position:relative;
+	top:0;
+	left:0;
+	width:960px;
+	margin:auto;
+	text-align:center;
+}
+nav ul{
+	position:absolute;
+	top:0px;
+	left:368px;
+	list-style:none;
+	width:581.167px ;
+	height:45px;
+	clear:both;
+}
+nav li{
+	float:left;
+	width:145px;
+	 height:45px;
+	 margin:0px auto;
+	 background-image:url(tat/images/nav_bar1.png)
+    
+    
+}
+
+nav a{
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	text-align: center;
+	letter-spacing: 2px;
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:15px;
+	display:block;
+		
+}
+nav a:hover{
+	color:#BF0000;
+}
+.logo{
+	position:absolute;
+	top:0;
+	left:90px;
+}
+.banner{
+	float:left;
+	margin-top:99px;
+	width:960px;
+	height:633.6px;
+	background-image:url(tat/images/banner-bkgrnd_03.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	
+}
+.you_bkgrnd{
+	float:left;
+	width:341px;
+	height:268.888px;
+	background-image:url(tat/images/banner_gray.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	padding:0;
+	margin-top:55px;
+	margin-left:10px;
+	overflow:hidden;
+	
+	
+}
+.you_bkgrnd h2{
+	margin-top: 15px;
+	margin-left:-1px;
+	margin-right:auto;
+	margin-bottom: auto;
+	font-family:arial;
+	color:#FFFFFF;
+	font-size:51px ;
+	word-spacing:0;
+	font-weight: black;
+	text-align: center;
+	letter-spacing:-5px;
+	text-shadow:6.89px 6.89px 5.74px black;
+}
+.you_bkgrnd h1{
+	
+	float:left;
+	margin-left:19px;
+	margin-top:0;
+	margin-right:0;
+	margin-bottom: 0;
+	font-family:arial;
+	color:#FFFFFF;
+	font-size:155px;
+	font-weight:black;
+	letter-spacing:-15px;
+	text-shadow:6.89px 6.89px 5.74px black;
+}
+.gallery_bkgrnd h1{
+	float:left;
+	margin-left:19px;
+	margin-top:0;
+	margin-right:0;
+	margin-bottom: 0;
+	font-family:arial;
+	color:#FFFFFF;
+	font-size:100px;
+	font-weight:black;
+	letter-spacing:-15px;
+	text-shadow:6.89px 6.89px 5.74px black;
+}
+.offer_bkgrnd{
+	
+	width:341px;
+	height:192.72 px;
+	background-image:url(tat/images/banner_red.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	padding:3px;
+	margin-top:371px;
+	margin-left:10px;
+	overflow:hidden;
+}
+.offer_bkgrnd h2{
+	margin:auto;
+	font-family:arial;
+	color:#FFFFFF;
+	font-size:28px ;
+	font-weight: black;
+	text-align: center;
+	letter-spacing:normal;
+	text-shadow: 2.3px 2.3px 1.15px black;
+}
+.banner_photo{
+	float:right;
+	width:569px;
+	height:578px;
+	padding:0;
+	margin-top:27px;
+	margin-bottom:auto;
+	margin-left:auto;
+	margin-right:10px;
+	overflow:hidden;
+}
+.gallery{
+	float:left;
+	margin-top:16px;
+	width:960px;
+	height:615px;
+	background-image:url(tat/images/gallery_bkgrnd_03.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+.gal1{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:27px;
+	margin-bottom:auto;
+	margin-left:10px;
+	margin-right:115px;
+}
+.gal2{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:27px;
+	margin-bottom:auto;
+	margin-left:0;
+	margin-right:109px;
+}
+.gal3{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:27px;
+	margin-bottom:auto;
+	margin-left:0;
+	margin-right:115px;
+}
+.gal4{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:27px;
+	margin-bottom:27px;
+	margin-left:0;
+	margin-right:10px;
+}
+.gallery p{
+	font-family:Times;
+	font-weight: normal;
+	font-size:40px;
+	color:#B4B8B3;
+	letter-spacing:5px;
+	
+}
+.gallery p strong{
+	font-size:50px;
+	color:#BF0000;
+}
+.gal5{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:auto;
+	margin-bottom:27px;
+	margin-left:10px;
+	margin-right:115px;
+}
+.gal6{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:auto;
+	margin-bottom:27px;
+	margin-left:0;
+	margin-right:109px;
+}
+.gal7{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:auto;
+	margin-bottom:27px;
+	margin-left:0;
+	margin-right:115px;
+}
+.gal8{
+	float:left;
+	width:150px;
+	height:220px;
+	padding:0;
+	margin-top:auto;
+	margin-bottom:27px;
+	margin-left:0;
+	margin-right:10px;
+}
+.footer{
+	
+	float:left;
+	margin-top:16px;
+	width:960px;
+	height:250px;
+	background-image:url(tat/images/footer_bkgrnd.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	
+}
+.footer_wrapper{
+	width:230px;
+	height:78px;
+	float:left;
+	margin-top:10px;
+	margin-left:22px;
+	margin-bottom:auto;
+	margin-right:auto;
+}
+.footer_wrapper h2{
+	
+	font-family:arial;
+	font-size:22px;
+	font-weight: normal;
+	color:#FFFFFF;
+	margin:auto;
+	
+}
+.footer_wrapper p{
+	color:#FFFFFF;
+	font-family:arial;
+	font-size:17px;
+	font-weight: normal;
+	margin:auto;
+}
+	
+
+.sprite_wrapper{
+	float:left;
+	width:50px;
+	height:250px;
+	margin-left:277px;
+	margin-top:0px;
+	margin-bottom:auto;
+	margin-right:auto;
+	
+}
+
+.sprite_home{
+	width:50px;
+	height:50px;
+	margin:10px;
+}
+.sprite_gallery{
+	width:50px;
+	height:50px;
+	margin:10px;
+}
+
+.sprite_contact{
+	width:50px;
+	height:50px;
+	margin:10px;
+}
+
+.sprite_about{
+	width:50px;
+	height:50px;
+	margin:10px;
+}
+
+.footertext_wrapper{
+	float:left;
+	width:65px;
+	height:250px;
+	margin-left:16px;
+	margin-top:0px;
+	margin-bottom:auto;
+	margin-right:auto;
+	
+}
+.footertext_wrapper p{
+	font-family:arial;
+	font-size:16px;
+	font-weight:normal;
+	color:#FFFFFF;
+	margin-top:25px;
+	margin-bottom:40px;
+}
+.social_wrapper{
+	float:left;
+	width:50px;
+	height:250px;
+	margin-left:225px;
+	margin-top:0px;
+	margin-bottom:auto;
+	margin-right:auto;
+}
+.sprite_facebook{
+	
+	width:50px;
+	height:50px;
+	margin:10px;
+}
+.sprite_twitter{
+	
+	width:50px;
+	height:50px;
+	margin:10px;
+}

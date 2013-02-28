@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <script>
+        function Universe(){
+            var instance = this;
+            this.start = 0;
+            this.bang = "bing";
+            Universe = function(){
+                return instance;
+            }
+        }
+        var uni,uni2;
+        uni = new Universe();
+        uni2 = new Universe();
+        console.log(uni === uni2);
+        
+        
+    </script>
+    singleton pattern
+</body>
+</html>

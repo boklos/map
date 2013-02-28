@@ -1,0 +1,57 @@
+aside, section, header {
+	display: block;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html{
+	background: white;
+}
+
+body {
+	width: 960px;
+	background: white;
+	margin: 0 auto 2em;
+	font: 100% Georgia, "Times New Roman", Times, serif;
+}
+
+header  {
+	font: normal 2em Arial, Helvetica, sans-serif;
+	color: black;
+	background: tan;
+	text-align: center;
+	line-height: 4em;
+	text-transform: uppercase;
+	letter-spacing:.1em;
+	margin: 0;
+}
+.menu{
+    background:blue;
+    text-align: center;
+    line-height: 2em;
+    width:960px;
+    height:100px;
+    margin:0 0 32px 0;
+}
+
+.col1 {
+	background: red;
+	height: 700px;
+	float: left;
+	margin-left: 32px;
+	margin-right:16px;
+	width: 314px;
+}
+
+.col2 {
+	background: green;
+	height: 700px;
+	float: right;
+	margin-right: 32px;
+	margin-left:16px;
+	width: 545px;
+}
+
+
+

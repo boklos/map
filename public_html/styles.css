@@ -1,0 +1,39 @@
+body{
+    font-size:16px;
+    font-family:Georgia,times,sans-serif;
+    color:black;
+    font-style: normal;
+    font-weight: normal;
+    background: tan;
+}
+.title{
+    font-size: 20px;
+    color:red;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+ol>li:nth-child(odd), ul>li:nth-child(odd){
+    background:orange;
+    width:10%
+}
+ol>li:nth-child(even), ul>li:nth-child(even){
+    background:white;
+    width:10%
+}
+table{
+    width:40%;
+    border: 2px solid black;
+}
+tr,td{
+    padding:7px 10px 10px 10px;
+}
+tr.head{
+    background-color: blue;
+}
+tr.even{
+    background-color:red;
+}
+tr.odd{
+    background-color:white;
+}

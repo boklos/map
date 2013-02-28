@@ -1,0 +1,111 @@
+aside, article, section, header, footer, nav {
+	display: block;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background: white;
+}
+body {
+	width: 960px;
+	background: gray;
+	margin: 0 auto 2em;
+	font: 100% Georgia, "Times New Roman", Times, serif;
+}
+header {
+	background: tan;
+	margin:0 1% 0 1%;
+}
+header h1 {
+	font: normal 2em Arial, Helvetica, sans-serif;
+	color: white;
+	text-align: center;
+	line-height: 4em;
+	text-transform: uppercase;
+	letter-spacing:.1em;
+	margin: 0;
+}
+.banner1{
+    background:blue;
+    width:940px;
+    height:14%;
+    margin:1%;
+}
+.banner2{
+    background:yellow;
+    width:940px;
+    margin:1%;
+    height:14%;
+}
+.col1 {
+	background: red;
+	height: 700px;
+	float: left;
+	margin: 1%;
+        padding:1%;
+	width: 26.7%;
+	margin-right: 20px;
+}
+.col2 {
+	background: maroon;
+	height: 700px;
+	float:left;
+	margin: 1%;
+        padding:1%;
+	width: 33%;
+        text-align: justify;
+}
+.col3 {
+	background: green;
+	height: 700px;
+	float: right;
+	margin: 1%;
+        padding:1%;
+	width: 26.7%;
+}
+footer {
+	background: orange;
+	line-height: 3em;
+	font-size: .6em;
+	color: white;
+	padding: 0 2em;
+	clear: both;
+}
+.title{
+    font-size: 20px;
+    color:red;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+table{
+    width:40%;
+    border: 2px solid black;
+}
+tr,td{
+    padding:.7% 1% 1% 1%;
+}
+tr.head{
+    background-color: blue;
+}
+tr.even{
+    background-color:red;
+}
+tr.odd{
+    background-color:white;
+}
+a:link{
+	color:black;
+}
+a:visited{
+	color:yellow;
+}
+a:hover{
+	background-color:orange;
+}
+a:active{
+	color:maroon;
+}
