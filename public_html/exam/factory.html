@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <script>
+function CarMaker(){
+}
+CarMaker.prototype.drive = function(){
+    return "Vroom, i have " + this.doors + "doors";
+};
+CarMaker.factory = function(type){
+    var constr=type;
+    var newcar;
+    if (typeof CarMaker[constr] !== "function"){
+        throw{
+            name : "Error",
+            message: constr + "doesn't exist"
+        };
+    }
+    if (typeof CarMaker[constr].prototype.drive !== "function"){
+        CarMaker[constr].prototype = new CarMaker();
+    }
+    newcar = new CarMaker[constr]();
+    return newcar;
+    
+};
+CarMaker.compact = function(){
+    this.doors = 4;
+};
+CarMaker.convertible = function(){
+    this.doors = 2;
+};
+CarMaker.suv = function(){
+    this.doors = 8;
+};
+
+var corolla = CarMaker.factory("compact");
+var roadstar = CarMaker.factory("convertible");
+var jeep = CarMaker.factory("suv");
+
+console.log(corolla.drive());
+console.log(roadstar.drive());
+console.log(jeep.drive());
+        
+    </script>
+    Factory Pattern
+</body>
+</html>

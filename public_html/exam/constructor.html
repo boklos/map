@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <script>
+        function Waffle(){
+            this.tastes = "good";
+            this.number = 10;
+            this.cooks = function(){
+                return "puffy"
+            };
+        };
+        
+        var waf1 = new Waffle();
+        var waf2 = new Waffle();
+        
+        console.log(waf1.tastes);
+        console.log(waf2.cooks());
+        
+    </script>
+    Constructor Pattern
+</body>
+</html>

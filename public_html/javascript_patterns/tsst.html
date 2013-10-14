@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+</head>
+<body>
+    <script>
+        CarMaker = function(){
+            
+        }
+        
+        CarMaker.prototype.drive = function(){
+            return " i have " + this.doors + "doors";
+        }
+        
+        CarMaker.factory = function(type){
+            var constr = type;
+            var newcar;
+            if (typeof CarMaker[constr] !== "function"){
+                throw{
+                    name : "error",
+                    message : constr + "don't exist"
+                };
+                
+                
+            };
+            if (typeof CarMaker[constr].prototype.drive !== "function"){
+                CarMaker[constr].prototype = new CarMaker();
+            };
+            newcar = new CarMaker[constr]();
+            return newcar;
+            
+            
+        };
+        
+        CarMaker.compact = function(){
+            this.doors = 2;
+        };
+        
+        CarMaker.suv = function(){
+            this.doors = 8;
+        };
+        CarMaker.lolo = 7;
+        
+        var corolla = CarMaker.factory("compact");
+        var jeep = CarMaker.factory("suv");
+        var bogus = CarMaker.factory("lolo");
+        
+        console.log(corolla.drive());
+        console.log(CarMaker.lolo);
+
+        
+        
+        
+    </script>
+    <!-- Insert your content here -->
+</body>
+</html>
