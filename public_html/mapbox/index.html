@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+<script type="text/javascript" src="https://raw.github.com/padolsey/prettyPrint.js/master/prettyprint.js"></script>
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.css' rel='stylesheet' />
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.ie.css' rel='stylesheet' >
+  
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    .name {
+  margin: 0.2em 0 0.5em 0 ;
+  text-align: justify;
+  font-size: large;
+  font-family: Helvetica, Arial, Sans-serif;
+  
+  
+}
+.yelp {
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: small;
+    color: #FF634D;
+    margin: 1.5em 0 1.5em 0;
+    font-family: Helvetica, Arial, Sans-serif;
+}
+.popup {
+    text-align: center;
+}
+.popup img {
+    width: 100%;
+}
+.address {
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: small;
+    margin: 1.5em 0 1.5em 0;
+    font-family: Helvetica, Arial, Sans-serif;
+}
+  </style>
+  <script src='./markers.js'></script>
+  <script>
+    $(document).ready(function () {
+      var auth = {
+        consumerKey: "W2tPmzQuRBS_DRv44al3pQ",
+        consumerSecret: "mOKE7mrqzXpGhJJVSVTa47H_8Kg",
+        accessToken: "20Fauz8pL_2I1tLQPcWvGRq55YHNOgdP",
+        accessTokenSecret: "XGS4hrutXV_Gt3UtAOG326RAGOM",
+        serviceProvider: {
+          signatureMethod: "HMAC-SHA1"
+        }
+      };
+      var accessor = {
+        consumerSecret: auth.consumerSecret,
+        tokenSecret: auth.accessTokenSecret
+      };
+
+      parameters = [];
+      parameters.push(['callback', 'cb']);
+      parameters.push(['oauth_consumer_key', auth.consumerKey]);
+      parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
+      parameters.push(['oauth_token', auth.accessToken]);
+      parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
+
+
+
+      var map = L.mapbox.map('map', 'boklos.map-7qocewph').setView([40.786, -73.919], 12);
+      map.markerLayer.setGeoJSON(markers);
+      map.markerLayer.on('ready', function (e) {
+
+        this.eachLayer(function (marker) {
+          var feature = marker.feature;
+          var message = {
+            'action': feature.properties.yelp,
+            'method': 'GET',
+            'parameters': parameters
+          };
+          OAuth.setTimestampAndNonce(message);
+          OAuth.SignatureMethod.sign(message, accessor);
+          var parameterMap = OAuth.getParameterMap(message.parameters);
+          parameterMap.oauth_signature = OAuth.percentEncode(parameterMap.oauth_signature);
+          $.ajax({
+            'url': message.action,
+            'data': parameterMap,
+            'cache': true,
+            'dataType': 'jsonp',
+            
+            'success': function (data, textStats, XMLHttpRequest) {
+              console.log(data);
+              var popupContent = '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+                '<img class="photo" src="' + feature.properties.image + '">' + '</a>' +
+               '<img src="' + data.rating_img_url + '">' + "   " + '<b class = "yelp">' +feature.properties.rating + '</b>' + " : " + '<strong>' +data.rating + '</strong>' + 
+                '<p class="name">' + feature.properties.name + '</p>' +
+            
+            '<p class="address">' + feature.properties.address + '</p>';
+              marker.bindPopup(popupContent, {
+                closeButton: true,
+                minWidth: 320
+              });
+
+            }
+          });
+
+          // Create custom popup content
+
+        });
+      });
+    });  </script>
+  <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+<div id='map'></div>
+<script>
+</script>
+</body>
+</html>
